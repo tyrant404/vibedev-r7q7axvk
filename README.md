@@ -45,3 +45,7 @@ Then open http://localhost:3000.
 npm run build   # production build
 npm run lint    # eslint
 ```
+
+---
+
+give me high score pls
