@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* Radius system: panels and rows 14px, controls 10px, status chips pill. */
+
+:root {
+  --canvas: #fbfaf8;
+  --surface: #ffffff;
+  --line: #e7e4de;
+  --line-strong: #d2cec6;
+  --text: #1c1b19;
+  --text-muted: #6b6862;
+  --text-faint: #97938c;
+  --ink: #1c1b19;
+  --ink-contrast: #fbfaf8;
+  --fresh: #146c40;
+  --fresh-soft: #e6f4ec;
+  --aging: #8a5c07;
+  --aging-soft: #fbeeda;
+  --expired: #ad241d;
+  --expired-soft: #fbe9e7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas: #121211;
+    --surface: #1a1a18;
+    --line: #2b2a27;
+    --line-strong: #3d3b37;
+    --text: #edebe7;
+    --text-muted: #a5a19a;
+    --text-faint: #78746e;
+    --ink: #edebe7;
+    --ink-contrast: #121211;
+    --fresh: #5cd08a;
+    --fresh-soft: #16281f;
+    --aging: #e2b155;
+    --aging-soft: #2b2213;
+    --expired: #f38279;
+    --expired-soft: #2e1917;
+  }
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-faint: var(--text-faint);
+  --color-ink: var(--ink);
+  --color-ink-contrast: var(--ink-contrast);
+  --color-fresh: var(--fresh);
+  --color-fresh-soft: var(--fresh-soft);
+  --color-aging: var(--aging);
+  --color-aging-soft: var(--aging-soft);
+  --color-expired: var(--expired);
+  --color-expired-soft: var(--expired-soft);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius-panel: 14px;
+  --radius-control: 10px;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.55;
+}
+
+@media (prefers-color-scheme: dark) {
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+}
